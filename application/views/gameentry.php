@@ -27,8 +27,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</button>	
 		<div class = "collapse navbar-collapse" id="collapsibleNavbar">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="<?php echo base_url(''); ?>">Home Page</a>
-				<a class="nav-item nav-link" href="<?php echo base_url('index.php/recordgame'); ?>">Home Page</a>
+				<a class="nav-item nav-link" href="<?php echo base_url(''); ?>">Home Page</a>
+                <a class="nav-item nav-link active" href="<?php echo base_url('index.php/recordgame'); ?>">Game Recorder</a>
 			</div>
 		</div>
 </nav>

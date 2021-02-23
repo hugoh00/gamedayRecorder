@@ -54,3 +54,5 @@ $route['default_controller'] = 'homepage';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['recordgame'] = 'Recordgame';
+$route['signIn'] = 'Recordgame/signIn';

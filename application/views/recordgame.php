@@ -27,8 +27,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</button>	
 		<div class = "collapse navbar-collapse" id="collapsibleNavbar">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="<?php echo base_url(''); ?>">Home Page</a>
-				<a class="nav-item nav-link" href="<?php echo base_url('index.php/recordgame'); ?>">Home Page</a>
+				<a class="nav-item nav-link" href="<?php echo base_url(''); ?>">Home Page</a>
+                <a class="nav-item nav-link active" href="<?php echo base_url('index.php/recordgame'); ?>">Game Recorder</a>
 			</div>
 		</div>
 </nav>
@@ -36,6 +36,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<body  style="background-color: #b3ffe0">
 
+    <?php
+    $url = base_url("signIn");
+echo <<<_END
+		
+        <!-- login form  -->
+        <form id="checkCorrectUser" name="checkCorrectUser" action="$url" method="post">
+        <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username" autocomplete="off">
+        </div>
+        <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password">
+        </div>
+        <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="login" value="login">Log In </button>
+        </form>
+_END;
+    ?>
 	</body>
 
 </html>
