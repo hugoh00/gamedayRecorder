@@ -25,7 +25,7 @@ class RecordGame extends CI_Controller {
 		//loading url helper
 		$this->load->helper('url');
 		//loading the model
-		$this->load->model('Homepage_model');
+		$this->load->model('Recordgame_model');
 	}
 	public function index()
 	{
@@ -37,7 +37,7 @@ class RecordGame extends CI_Controller {
 		$username = $this->input->post("username");
 		$password = $this->input->post("password");
 		
-		if ($this->Homepage_model->checkLoginDetails($username, $password)) {
+		if ($this->Recordgame_model->checkLoginDetails($username, $password)) {
 			//if its true redirected to the dashboard controller/view
 			$this->load->view('gameentry');
 			

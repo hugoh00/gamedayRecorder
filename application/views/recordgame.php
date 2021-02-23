@@ -35,6 +35,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<body  style="background-color: #b3ffe0">
+    <div class="container" style="background-color:aliceblue; padding-top:5px; padding-bottom:10px;">
+    <?php 
+        if(isset($errorMessage)) {
+            echo "<div class='alert alert-danger' role='alert'>Incorrect Login Details!</div>";
+        }
+    ?>
         <!-- login form  -->
         <form id="checkCorrectUser" name="checkCorrectUser" action="<?php echo base_url('index.php/signIn'); ?>" method="post">
             <div class="form-group">
@@ -47,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="login" value="login">Log In </button>
         </form>
+    </div>
 	</body>
 
 </html>

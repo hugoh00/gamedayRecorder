@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<body  style="background-color: #b3ffe0">
-
+	<h1 class="display-4">Gameday Recorder <small class="text-muted">Homepage</small></h1>
 	</body>
 
 </html>
