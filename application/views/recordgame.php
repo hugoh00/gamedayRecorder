@@ -35,25 +35,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<body  style="background-color: #b3ffe0">
-
-    <?php
-    $url = base_url("signIn");
-echo <<<_END
-		
         <!-- login form  -->
-        <form id="checkCorrectUser" name="checkCorrectUser" action="$url" method="post">
-        <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username" autocomplete="off">
-        </div>
-        <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password">
-        </div>
-        <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="login" value="login">Log In </button>
+        <form id="checkCorrectUser" name="checkCorrectUser" action="<?php echo base_url('index.php/signIn'); ?>" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password">
+            </div>
+            <button class="btn btn-outline-success btn-lg btn-block" type="submit" name="login" value="login">Log In </button>
         </form>
-_END;
-    ?>
 	</body>
 
 </html>
