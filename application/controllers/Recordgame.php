@@ -49,4 +49,31 @@ class RecordGame extends CI_Controller {
 		}
 	
 	}
+
+    public function saveRLtournamentInfo() 
+    {
+        //collect values from the post
+        //general tournament info
+		$date = $this->input->post("tournamentDate");
+        $placement = $this->input->post("tournamentPlacement");
+        // team info
+        $teamName = $this->input->post("teamName");
+        $teamGoals = $this->input->post("teamGoals");
+        $goals = $this->input->post("goals");
+        $assists = $this->input->post("assists");
+        $saves = $this->input->post("saves");
+        if ($this->Recordgame_model->rocketLeagueTournamentInfo($date, $placement, $teamName, 
+        $teamGoals, $goals, $assists, $saves)) {
+			//load back in with a success display
+            $data['rlInfoError'] = false;
+			$this->load->view('gameentry', $data);
+			
+		} else {
+			//send back into welcome with a error indicator
+			$data['rlInfoError'] = true;
+            $this->load->view('gameentry', $data);
+			
+		}
+
+    }
 }

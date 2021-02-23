@@ -35,7 +35,105 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	<body  style="background-color: #b3ffe0">
+    <div class="container" style="background-color:aliceblue; padding-top:5px; padding-bottom:10px;">
+        <!-- Game Select -->
+			<div class="form-group">
+				<label for="gameSelect">Game Title:</label>
+				<select class="form-control selectpicker" style="width:50%" id="gameSelect" name="gameSelect">
+                    <option value="X">Select Game</option>
+					<option value="RL">Rocket League</option>
+					<option value="FTK">For The King</option>
+				</select>	
+			</div>
+            <?php 
+        if (isset($rlInfoError)){
+            if($rlInfoError == false) {
+                echo "<div class='alert alert-success' role='alert'>Record Added!</div>";
+            } else if ($rlInfoError == true) {
+                echo "<div class='alert alert-danger' role='alert'>Something Went Wrong!</div>";
+            } 
+        }
+    ?>
+    </div>
 
+    <br>
+
+    <div class="container" id="rlForm" style="background-color:aliceblue; padding-top:5px; padding-bottom:10px;">
+        <form id="rlInfo" name="rlInfo" action="<?php echo base_url("index.php/saveRLtournament"); ?>" method="post">
+        
+        <h3 class="form-title">Rocket League Tournament Information</h3>
+        <!-- day of tournament -->
+            <div class="form-row">
+				<div class="col">
+                    <label for="tournamentDate">Tournament Date:</label>
+					<input class="form-control" type="date" id="tournamentDate" name="tournamentDate" required>
+				</div>
+        <!-- Tournament Finish -->
+                <div class="col">
+                    <label for="tournamentPlacement">Tournament Placement:</label>
+                    <select class="form-control" id="tournamentPlacement" name="tournamentPlacement">
+                        <option value="0">First Rounded</option>
+                        <option value="1">Last 16</option>
+                        <option value="2">Quarter Finals</option>
+                        <option value="3">Semi Finals</option>
+                        <option value="4">Finals</option>
+                        <option value="5">Finals WINNER!</option>
+                    </select>	
+                </div>
+			</div>
+            <br>
+            <h5 class="form-title">Team Information</h5>
+        <!-- team name -->
+        <div class="form-group">
+            <label for="teamName">Name & Stats:</label>
+            <input type="text" class="form-control" id="teamName" name="teamName" placeholder="Enter Team Name" autocomplete="off">
+        </div>
+        <!-- team goals, goals, assists, and saves -->
+        <div class="form-row">
+            <div class="col">
+                <input type="text" id="teamGoals" name="teamGoals" class="form-control" placeholder="Team Goals" autocomplete="off">
+            </div>
+            <div class="col">
+                <input type="text" id="goals" name="goals" class="form-control" placeholder="Goals" autocomplete="off">
+            </div>
+            <div class="col">
+                <input type="text" id="assists" name="assists" class="form-control" placeholder="Assists" autocomplete="off">
+            </div>
+            <div class="col">
+                <input type="text" id="saves" name="saves" class="form-control" placeholder="Saves" autocomplete="off">
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-outline-info btn-lg btn-block" type="savetournamentInfo" name="savetournamentInfo" value="savetournamentInfo">Store Tournament Information</button>
+        </div>
+        </form>
+    </div>
+
+    <div class="container" id="ftkForm" style="background-color:aliceblue; padding-top:5px; padding-bottom:10px;">
+   
+    </div>
 	</body>
 
 </html>
+
+<script>
+$("#gameSelect").change(function() {
+  if ($(this).val() == "X") {
+    //   hide both forms
+    $('#rlForm').hide();
+    $('#ftkForm').hide();
+  } else if ($(this).val() == "RL") {
+    //   displays the rocket league form
+    $('#rlForm').show();
+    $('#ftkForm').hide();
+  } else if ($(this).val() == "FTK") {
+    //   displays the rocket league form
+    $('#ftkForm').show();
+    $('#rlForm').hide();
+  }
+});
+$("#gameSelect").trigger("change");
+
+</script>
+
+
