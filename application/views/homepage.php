@@ -25,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="navbar-nav">
 				<a class="nav-item nav-link active" href="<?php echo base_url(''); ?>">Home Page</a>
 				<a class="nav-item nav-link" href="<?php echo base_url('index.php/recordgame'); ?>">Game Recorder</a>
+				<a class="nav-item nav-link" href="<?php echo base_url('index.php/rocketLeagueStats'); ?>">Rocket League Stats</a>
 			</div>
 		</div>
 </nav>

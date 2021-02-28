@@ -29,6 +29,8 @@ class Rocketleaguestats extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('rocketleaguestats');
+        $data['tournamentDates'] = $this->Rocketleaguestats_model->tournamentDates();
+        
+		$this->load->view('rocketleaguestats', $data);
 	}
 }
