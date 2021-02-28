@@ -15,7 +15,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Google Charts libraries -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	
-	<script type='text/javascript' src="<?php echo base_url('public/javascript/welcomeRegistration.js') ?>"></script>
 	<title>Gameday Record Entry</title>
 </head>
 

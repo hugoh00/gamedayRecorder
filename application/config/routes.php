@@ -57,3 +57,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['recordgame'] = 'Recordgame';
 $route['signIn'] = 'Recordgame/signIn';
 $route['saveRLtournament'] = 'Recordgame/saveRLtournamentInfo';
+
+$route['rocketLeagueStats'] = 'Rocketleaguestats';

@@ -12,7 +12,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<!-- Latest compiled JavaScript -->
     <script src="<?php echo base_url('public\javascript\bootstrap.js') ?>"></script>
-	<title>Gameday Record Homepage</title>
+	<!-- Google Charts libraries -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
+	<title>Rocket League Stats</title>
 </head>
 
 <!-- Navigation Bar to access pages -->
@@ -23,15 +26,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</button>	
 		<div class = "collapse navbar-collapse" id="collapsibleNavbar">
 			<div class="navbar-nav">
-				<a class="nav-item nav-link active" href="<?php echo base_url(''); ?>">Home Page</a>
-				<a class="nav-item nav-link" href="<?php echo base_url('index.php/recordgame'); ?>">Game Recorder</a>
+				<a class="nav-item nav-link" href="<?php echo base_url(''); ?>">Home Page</a>
+                <a class="nav-item nav-link" href="<?php echo base_url('index.php/recordgame'); ?>">Game Recorder</a>
+                <a class="nav-item nav-link active" href="<?php echo base_url('index.php/recordgame'); ?>">Rocket League Stats</a>
 			</div>
 		</div>
 </nav>
 
 
 	<body  style="background-color: #b3ffe0">
-	<h1 class="display-4">Gameday Recorder <small class="text-muted">Homepage</small></h1>
+    
 	</body>
 
 </html>
+
+<script type="text/javascript">
+
+</script>
+
+
