@@ -18,7 +18,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title><?php echo $username . $appName;?></title>
 
 
-
-
-
-

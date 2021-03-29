@@ -20,7 +20,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Navigation Bar to access pages -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-static-top">
-	<a class="navbar-brand" href="#">Gameday Recorder</a>
+    <a class="navbar-brand" >
+            <img src="<?php echo base_url('public\images\logo.png') ?>" width="50" height="50" class="d-inline-block" alt="">
+            <h4>Gameday Recorder</h4>
+    </a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
    		<span class="navbar-toggler-icon"></span>
 	</button>	
@@ -34,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </nav>
 
 
-	<body  style="background-color: #b3ffe0">
+<body  style="background-color: #c8a2c8">
     <div class="container" style="background-color:aliceblue; padding-top:5px; padding-bottom:10px;">
         <div id="calendar_tournaments"></div>
     </div>
