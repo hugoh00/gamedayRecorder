@@ -44,6 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<select class="form-control selectpicker" style="width:50%" id="gameSelect" name="gameSelect">
                     <option value="X">Select Game</option>
 					<option value="RL">Rocket League</option>
+                    <option value="RLC">New Preset</option>
 					<option value="FTK">For The King</option>
 				</select>	
 			</div>
@@ -111,6 +112,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </form>
     </div>
 
+    <div class="container" id="rlCarform" style="background-color:aliceblue; padding-top:5px; padding-bottom:10px;">
+        <form id="rlCar" name="rlCar" action="<?php echo base_url("index.php/saveCarInfo"); ?>" method="post">
+        
+        <h3 class="form-title">Rocket League Preset Creation</h3>
+        <!-- Car -->
+        <!-- PHP loop to echo out selections of all cars stored -->
+        <!-- If other selected text box appears so car can be added -->
+                <div class="col">
+                    <label for="car">Car:</label>
+                    <select class="form-control" id="car" name="car">
+                        <option value="0">Select Car</option>
+                        <option value="x">Not Appearing?</option>
+                        <!-- loop here -->
+                    </select>	
+                </div>
+                <div class="form-group" id="newCar">
+                    <label for="cardetails">Car:</label>
+                    <input type="text" class="form-control" id="cardetails" name="cardetails" placeholder="Enter Car Name" autocomplete="off">
+                </div>
+
+            <!-- Decal -->
+        <!-- PHP loop to echo out selections of all cars stored -->
+        <!-- If other selected text box appears so car can be added -->
+            <div class="col">
+                    <label for="decal">Car:</label>
+                    <select class="form-control" id="decal" name="decal">
+                        <option value="0">Select Decal</option>
+                        <option value="1">None</option>
+                        <option value="x">Not Appearing?</option>
+                        <!-- loop here -->
+                    </select>	
+            </div>
+                <div class="form-group" id="newDecal">
+                    <label for="decaldetails">Decal:</label>
+                    <input type="text" class="form-control" id="decaldetails" name="decaldetails" placeholder="Enter Decal Name" autocomplete="off">
+                </div>
+            <br>
+        
+        
+            
+        <br>
+        <button class="btn btn-outline-info btn-lg btn-block" type="savetournamentInfo" name="savetournamentInfo" value="savetournamentInfo">Store Tournament Information</button>
+        </div>
+        </form>
+    </div>
+
     <div class="container" id="ftkForm" style="background-color:aliceblue; padding-top:5px; padding-bottom:10px;">
    
     </div>
@@ -119,22 +166,57 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </html>
 
 <script>
+$(function(){
+    $('#rlForm').hide();
+    $('#rlCarform').hide();
+    $('#ftkForm').hide();
+
+    // preset form
+    $('#newCar').hide();
+    $('#newDecal').hide();
+});
 $("#gameSelect").change(function() {
   if ($(this).val() == "X") {
     //   hide both forms
     $('#rlForm').hide();
+    $('#rlCarform').hide();
     $('#ftkForm').hide();
   } else if ($(this).val() == "RL") {
     //   displays the rocket league form
     $('#rlForm').show();
+    $('#rlCarform').hide();
     $('#ftkForm').hide();
   } else if ($(this).val() == "FTK") {
     //   displays the rocket league form
     $('#ftkForm').show();
+    $('#rlCarform').hide();
+    $('#rlForm').hide();
+  }  else if ($(this).val() == "RLC") {
+    //   displays the rocket league form
+    $('#rlCarform').show();
+    $('#ftkForm').hide();
     $('#rlForm').hide();
   }
 });
 $("#gameSelect").trigger("change");
+
+$("#car").change(function() {
+  if ($(this).val() == "X") {
+    $('#newCar').show();
+  } else {
+    $('#newCar').hide();
+  }
+});
+$("#car").trigger("change");
+
+$("#decal").change(function() {
+  if ($(this).val() == "X") {
+    $('#newDecal').show();
+  } else {
+    $('#newDecal').hide();
+  }
+});
+$("#decal").trigger("change");
 
 </script>
 

@@ -30,6 +30,8 @@ class Homepage extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->view('homepage');
+		$data['tournamentDates'] = $this->Homepage_model->tournamentDates();
+        
+		$this->load->view('homepage', $data);
 	}
 }
