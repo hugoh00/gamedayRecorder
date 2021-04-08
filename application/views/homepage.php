@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Navigation Bar to access pages -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-static-top">
     <a class="navbar-brand" >
-            <img src="<?php echo base_url('public\images\logo.png') ?>" width="50" height="50" class="d-inline-block" alt="">
+            <img src="<?php echo base_url('public\images\logofinal.png') ?>" width="50" height="50" class="d-inline-block" alt="">
             <h4>Gameday Recorder</h4>
     </a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

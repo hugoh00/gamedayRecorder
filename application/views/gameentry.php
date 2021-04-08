@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Navigation Bar to access pages -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark navbar-static-top">
     <a class="navbar-brand" >
-            <img src="<?php echo base_url('public\images\logo.png') ?>" width="50" height="50" class="d-inline-block" alt="">
+            <img src="<?php echo base_url('public\images\logofinal.png') ?>" width="50" height="50" class="d-inline-block" alt="">
             <h4>Gameday Recorder</h4>
     </a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -123,30 +123,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <label for="car">Car:</label>
                     <select class="form-control" id="car" name="car">
                         <option value="0">Select Car</option>
-                        <option value="x">Not Appearing?</option>
+                        <option value="X">Not Appearing?</option>
                         <!-- loop here -->
                     </select>	
                 </div>
                 <div class="form-group" id="newCar">
-                    <label for="cardetails">Car:</label>
-                    <input type="text" class="form-control" id="cardetails" name="cardetails" placeholder="Enter Car Name" autocomplete="off">
+                    </br>
+                    <input type="text" class="form-control form-control-sm" id="cardetails" name="cardetails" placeholder="Enter Car Name" autocomplete="off">
                 </div>
 
             <!-- Decal -->
         <!-- PHP loop to echo out selections of all cars stored -->
         <!-- If other selected text box appears so car can be added -->
             <div class="col">
-                    <label for="decal">Car:</label>
+                    <label for="decal">Decal:</label>
                     <select class="form-control" id="decal" name="decal">
                         <option value="0">Select Decal</option>
                         <option value="1">None</option>
-                        <option value="x">Not Appearing?</option>
+                        <option value="X">Not Appearing?</option>
                         <!-- loop here -->
                     </select>	
             </div>
                 <div class="form-group" id="newDecal">
-                    <label for="decaldetails">Decal:</label>
-                    <input type="text" class="form-control" id="decaldetails" name="decaldetails" placeholder="Enter Decal Name" autocomplete="off">
+                    </br>
+                    <input type="text" class="form-control form-control-sm" id="decaldetails" name="decaldetails" placeholder="Enter Decal Name" autocomplete="off">
                 </div>
             <br>
         
